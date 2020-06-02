@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:text="设置"
+        android:textSize="18dp"
+        android:paddingTop="25dp"
+        android:gravity="center"
+        android:textColor="#ffffff"
+        android:background="#ff2ec5b6"
+        tools:layout_editor_absoluteY="-1dp"
+        tools:layout_editor_absoluteX="0dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/title" />
+
+    <TextView
+        android:id="@+id/back_btn"
+        android:clickable="true"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@+id/title"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:text="〈"
+        android:textColor="#ffffff"
+        android:textSize="26dp" />
+
+    <GridView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ededed"
+        android:horizontalSpacing="1dp"
+        android:verticalSpacing="1dp"
+        android:padding="1dp"
+        android:id="@+id/gridView1"
+        android:layout_below="@+id/title"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>
