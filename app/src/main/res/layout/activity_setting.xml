@@ -35,6 +35,54 @@
         android:text="〈"
         android:textColor="#ffffff"
         android:textSize="26dp" />
+    <RelativeLayout
+        android:id="@+id/rela_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:background="#ffffff"
+        >
+        <ImageView
+            android:id="@+id/image_setting_userhead"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/userhead" />
+
+        <TextView
+            android:id="@+id/text_setting_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="13dp"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="16dp"
+            android:layout_toEndOf="@+id/image_setting_userhead"
+            android:layout_toRightOf="@+id/image_setting_userhead"
+            android:text="未登录"
+            android:textColor="#353535"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/text_setting_userinfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/text_setting_username"
+            android:layout_alignStart="@+id/text_setting_username"
+            android:layout_below="@+id/text_setting_username"
+            android:layout_marginTop="14dp"
+            android:text="管理用户名、用户名、密码等" />
+
+        <ImageView
+            android:id="@+id/image_setting_login"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/next"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd="16dp" />
+    </RelativeLayout>
 
     <GridView
         android:layout_width="match_parent"
@@ -44,7 +92,7 @@
         android:verticalSpacing="1dp"
         android:padding="1dp"
         android:id="@+id/gridView1"
-        android:layout_below="@+id/title"
+        android:layout_below="@+id/rela_user"
         android:layout_alignParentStart="true" />
 
 </RelativeLayout>

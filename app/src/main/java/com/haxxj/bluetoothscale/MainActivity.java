@@ -26,6 +26,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.haxxj.bluetoothscale.DBUtils.DataBaseUtils;
 import com.haxxj.bluetoothscale.Utils.ButtonDelayUtils;
 import com.haxxj.bluetoothscale.service.BluetoothLeService;
 
@@ -89,8 +90,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        DataBaseUtils.initDataBase(this);
         initview();
-        init_ble();
+      //  init_ble();
     }
 
     @Override
@@ -177,7 +179,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Intent settingintent = new Intent(MainActivity.this, SettingActivity.class);
                 settingintent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                 startActivity(settingintent);
-                finish();
+                //finish();
                 break;
             default:
                 break;

@@ -29,7 +29,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/TranslucentTheme">
-        <activity android:name=".SettingActivity"></activity>
+        <activity android:name=".Item_addActivity"></activity>
+        <activity android:name=".Item_infoActivity" />
+        <activity android:name=".SettingActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -37,6 +39,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <service
             android:name=".service.BluetoothLeService"
             android:enabled="true" />
