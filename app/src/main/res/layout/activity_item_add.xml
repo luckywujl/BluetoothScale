@@ -71,8 +71,8 @@
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:textSize="16dp"
-                android:textColor="#000000"
-                android:text="产品货号:"
+                android:textColor="#FF0000"
+                android:text="产品货号(*):"
                 />
             <EditText
                 android:id="@+id/item_id"
@@ -117,8 +117,8 @@
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:textSize="16dp"
-                android:textColor="#000000"
-                android:text="产品名称:"
+                android:textColor="#FF0000"
+                android:text="产品名称(*):"
                 />
             <EditText
                 android:id="@+id/item_name"
@@ -140,8 +140,8 @@
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:textSize="16dp"
-                android:textColor="#000000"
-                android:text="单位:"
+                android:textColor="#FF0000"
+                android:text="单位(*):"
                 />
             <EditText
                 android:id="@+id/item_unit"
@@ -227,7 +227,7 @@
                 android:text="计数基数:"
                 />
             <EditText
-                android:id="@+id/item_countint_base_number"
+                android:id="@+id/item_counting_base_number"
                 android:layout_width="0dp"
                 android:layout_weight="3"
                 android:layout_height="wrap_content"

@@ -44,7 +44,7 @@ public class Item_infoActivity extends AppCompatActivity implements Adapter.IonS
      */
     private void getdata() {
         itemList.clear();
-        ArrayList<Item_info> item_info = (ArrayList<Item_info>) DataBaseUtils.getDaoSession().getItem_infoDao().queryBuilder().orderAsc(Item_infoDao.Properties.Item_id).list();
+        ArrayList<Item_info> item_info = (ArrayList<Item_info>) DataBaseUtils.getDaoSession().getItem_infoDao().queryBuilder().where(Item_infoDao.Properties.Item_status.eq(0)).orderAsc(Item_infoDao.Properties.Item_id).list();
         for (i = 0; i < item_info.size(); i++) {
             HashMap<String, Object> recycleItem = new HashMap<String, Object>();//定义一个哈西数组，用于存储一行记录
             recycleItem.put("_id", item_info.get(i).getPrimid());
@@ -91,6 +91,8 @@ public class Item_infoActivity extends AppCompatActivity implements Adapter.IonS
             @Override
             public void onClick(View v) {
                 Intent add_intent = new Intent(Item_infoActivity.this,Item_addActivity.class);
+                add_intent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+                add_intent.putExtra("Primid","-1");
                 startActivity(add_intent);
                 finish();
 
@@ -116,6 +118,10 @@ public class Item_infoActivity extends AppCompatActivity implements Adapter.IonS
 
     @Override
     public void onDetailBtnClick(View view, int position) {
+        Intent detail_intent = new Intent(Item_infoActivity.this,Item_addActivity.class);
+        detail_intent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+        detail_intent.putExtra("Primid", itemList.get(position).get("_id").toString());
+        startActivity(detail_intent);
         Toast.makeText(this, "进入查看详情页", Toast.LENGTH_SHORT).show();
 
     }

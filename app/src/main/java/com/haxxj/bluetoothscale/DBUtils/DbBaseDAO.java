@@ -15,7 +15,7 @@ public class DbBaseDAO {
      */
     public static void insert_item_info(Item_info item_info) {
         try {
-            DataBaseUtils.getDaoSession().getItem_infoDao().insert(item_info);
+            DataBaseUtils.getDaoSession().getItem_infoDao().insertOrReplace(item_info);
         } catch (Exception e) {
             e.printStackTrace();
         }
